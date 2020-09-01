@@ -22,8 +22,8 @@ var customer_id = "e0fe87a8-5911-4ea2-a2ea-9e98d2cf9805";
 var client_id = "8bd8060e-5c86-4195-8777-7069166d420e";
 //var client_id = "734c617c-e875-4824-99ab-9979f3b4578e";
 
-var redirect_uri = "http://gotours.guoqing.li/callback.html";
-var post_logout_redirect_uri = "http://gotours.guoqing.li/index.html";
+var redirect_uri = "https://gotours.guoqing.li/callback.html";
+var post_logout_redirect_uri = "https://gotours.guoqing.li/index.html";
 //#################### Configuarations over. 
 
 
