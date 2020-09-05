@@ -26,7 +26,8 @@ xmlhttp.onreadystatechange=function()
         document.querySelector("div[data-elementname='currentPassword']").style.display="";
     }
 }
-xmlhttp.open("GET","https://gw.guoqing.li:9090/otp?identifier="+document.getElementById("capture_signIn_emailOrMobileNumber").value,true); 
+//xmlhttp.open("GET","https://gw.guoqing.li:9090/otp?identifier="+document.getElementById("capture_signIn_emailOrMobileNumber").value,true); 
+xmlhttp.open("GET","https://gw.guoqing.li:9090/otp") ;
 xmlhttp.send();
 }
 
