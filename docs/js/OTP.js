@@ -30,4 +30,17 @@ xmlhttp.open("GET","http://localhost:9090/otp?identifier="+document.getElementBy
 xmlhttp.send();
 }
 
-document.writeln("<a href=\"javascript: loadXMLDoc()\" > SMS Validation </a>");
+
+
+var container = document.getElementById("capture_signIn_signInForm");
+var alink = document.createElement('a');
+alink.href = '#';
+alink.onclick = function () {
+    loadXMLDoc();
+    this.style.backgroundColor = 'red';
+    return false;
+};
+alink.innerHTML = 'SMS Validation';
+container.appendChild(alink);
+
+
