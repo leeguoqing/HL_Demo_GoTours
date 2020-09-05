@@ -30,8 +30,6 @@ xmlhttp.open("GET","http://localhost:9090/otp?identifier="+document.getElementBy
 xmlhttp.send();
 }
 
-
-
 var container = document.getElementById("capture_signIn_signInForm");
 var alink = document.createElement('a');
 alink.href = '#';
