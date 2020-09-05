@@ -38,7 +38,8 @@ var alink = document.createElement('a');
 alink.href = '#';
 alink.onclick = function () {
     loadWithJs();
-    this.style.backgroundColor = 'red';
+    this.style.color = 'blue';
+    this.innerHTML = "Please enter SMS code in 60 seconds";
     return false;
 };
 alink.innerHTML = 'SMS Validation';
