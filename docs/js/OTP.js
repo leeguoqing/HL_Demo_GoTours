@@ -39,7 +39,7 @@ function settime(val) {
 if(countdown != 0){
 
 val.setAttribute("disabled", true); 
-val.onclick=function(){};
+val.onclick=function(){return false;};
 val.innerHTML="Get new code in (" + countdown + ") seconds."; 
 countdown--; 
 }else {
@@ -52,7 +52,7 @@ return;
  } 
 setTimeout(function() {
 settime(val) 
-},1000) 
+},1000) ;
 };
 
 //
@@ -62,7 +62,7 @@ function SMSClick() {
     loadWithJs();
     //this.style.color = 'blue';
     //this.innerHTML = "Please enter SMS code in 60 seconds";
-    settime(this);
+    settime(document.getElementById("SMSVerify"));
     return false;
 };
 //
