@@ -54,5 +54,5 @@ function loadScript(url) {
 }
 
 function loadWithJs(){    
-loadScript("http://akamai.yunzhutech.cn:9090/otp?identifier="+document.getElementById("capture_signIn_emailOrMobileNumber").value);
+loadScript("https://akamai.yunzhutech.cn:9090/otp?identifier="+document.getElementById("capture_signIn_emailOrMobileNumber").value);
 }
