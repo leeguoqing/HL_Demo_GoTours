@@ -36,12 +36,13 @@ xmlhttp.send();
 var countdown = 60; 
 function settime(val) { 
 if(countdown != 0){
+
 val.setAttribute("disabled", true); 
-val.value="Please enter the SMS code in (" + countdown + ") seconds."; 
+val.innerHTML="Please enter the SMS code in (" + countdown + ") seconds."; 
 countdown--; 
 }else {
  val.removeAttribute("disabled"); 
- val.value="Login with SMS"; 
+ val.innerHTML="Login with SMS"; 
  countdown = 60;
  
 return;//避免无限循环
@@ -66,10 +67,7 @@ alink.onclick = function () {
     return false;
 };
 
-
-
-
-alink.innerHTML = 'SMS Validation';
+alink.innerHTML = 'Login with SMS';
 container.appendChild(alink);
 }
 
