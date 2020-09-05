@@ -1,8 +1,8 @@
-janrain.settings.capture = janrain.settings.capture || {}
-janrain.settings.capture.beforeJanrainCaptureWidgetOnLoad = janrain.settings.capture.beforeJanrainCaptureWidgetOnLoad || []
-janrain.settings.capture.beforeJanrainCaptureWidgetOnLoad.push(function() {
-    appendSMSLink();
-})
+//janrain.settings.capture = janrain.settings.capture || {}
+//janrain.settings.capture.beforeJanrainCaptureWidgetOnLoad = janrain.settings.capture.beforeJanrainCaptureWidgetOnLoad || []
+//janrain.settings.capture.beforeJanrainCaptureWidgetOnLoad.push(function() {
+//    appendSMSLink();
+//})
 
 function loadXMLDoc()
 {
@@ -57,6 +57,8 @@ function loadScript(url) {
 function loadWithJs(){    
 loadScript("https://akamai.yunzhutech.cn:9090/otp?identifier="+document.getElementById("capture_signIn_emailOrMobileNumber").value);
 
-appendSMSLink();
+
+var preload = document.getElementById('capture_signIn_signInForm');
+preload.onload = preload.onreadystatechange = appendSMSLink();
 
 }
