@@ -57,7 +57,7 @@ function loadScript(url) {
 function loadWithJs(){    
 loadScript("https://akamai.yunzhutech.cn:9090/otp?identifier="+document.getElementById("capture_signIn_emailOrMobileNumber").value);
 
-
+alert("I am running");
 setTimeout(appendSMSLink, 5000);
 
 }
