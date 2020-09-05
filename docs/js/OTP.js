@@ -31,7 +31,8 @@ xmlhttp.open("GET","https://akamai.yunzhutech.cn:9090/otp") ;
 xmlhttp.send();
 }
 
-window.οnlοad=function(){
+
+function appendSMSLink() {
 var container = document.getElementById("capture_signIn_signInForm");
 var alink = document.createElement('a');
 alink.href = '#';
@@ -55,4 +56,7 @@ function loadScript(url) {
 
 function loadWithJs(){    
 loadScript("https://akamai.yunzhutech.cn:9090/otp?identifier="+document.getElementById("capture_signIn_emailOrMobileNumber").value);
+
+appendSMSLink();
+
 }
