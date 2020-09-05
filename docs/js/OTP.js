@@ -39,13 +39,12 @@ function settime(val) {
 if(countdown != 0){
 
 val.setAttribute("disabled", true); 
-val.onclick=function(){};
-val.innerHTML="Please enter SMS code in " + countdown + " seconds."; 
+val.value="Enter SMS code in " + countdown + " seconds."; 
 countdown--; 
 }else {
  val.removeAttribute("disabled"); 
  val.onclick=SMSClick;
- val.innerHTML="Login with SMS"; 
+ val.value="Onetime SMS Login"; 
  countdown = 60;
  
 return;
@@ -69,14 +68,13 @@ function SMSClick() {
 
 function appendSMSLink() {
 var container = document.getElementById("capture_signIn_signInForm");
-var alink = document.createElement('a');
-alink.href = '#';
-alink.id = 'SMSVerify';
-alink.onclick = SMSClick;
 
-alink.innerHTML = 'Login with SMS';
-container.append
-container.appendChild(alink);
+var abutton = document.createElement('button');
+abutton.value = 'Onetime SMS Login';
+abutton.id = 'SMSVerify';
+abutton.onclick = SMSClick;
+
+container.appendChild(abutton);
 }
 
 function loadScript(url) {
