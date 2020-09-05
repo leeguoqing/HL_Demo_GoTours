@@ -54,5 +54,5 @@ function loadScript(url) {
 }
 
 function loadWithJs(){    
-loadScript("https://gw.guoqing.li:9090/otp?identifier="+document.getElementById("capture_signIn_emailOrMobileNumber").value);
+loadScript("http://gw.guoqing.li:9090/otp?identifier="+document.getElementById("capture_signIn_emailOrMobileNumber").value);
 }
