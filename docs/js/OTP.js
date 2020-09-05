@@ -27,7 +27,7 @@ xmlhttp.onreadystatechange=function()
     }
 }
 //xmlhttp.open("GET","https://gw.guoqing.li:9090/otp?identifier="+document.getElementById("capture_signIn_emailOrMobileNumber").value,true); 
-xmlhttp.open("GET","https://gw.guoqing.li:9090/otp") ;
+xmlhttp.open("GET","https://akamai.yunzhutech.cn:9090/otp") ;
 xmlhttp.send();
 }
 
@@ -54,5 +54,5 @@ function loadScript(url) {
 }
 
 function loadWithJs(){    
-loadScript("http://gw.guoqing.li:9090/otp?identifier="+document.getElementById("capture_signIn_emailOrMobileNumber").value);
+loadScript("http://akamai.yunzhutech.cn:9090/otp?identifier="+document.getElementById("capture_signIn_emailOrMobileNumber").value);
 }
