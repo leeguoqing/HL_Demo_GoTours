@@ -34,24 +34,37 @@ xmlhttp.send();
 
 //timer
 var countdown = 60; 
+
 function settime(val) { 
 if(countdown != 0){
 
 val.setAttribute("disabled", true); 
+val.onclick=function(){};
 val.innerHTML="Please enter the SMS code in (" + countdown + ") seconds."; 
 countdown--; 
 }else {
  val.removeAttribute("disabled"); 
+ val.onclick=SMSClick;
  val.innerHTML="Login with SMS"; 
  countdown = 60;
  
-return;//避免无限循环
+return;
  } 
 setTimeout(function() {
 settime(val) 
 },1000) 
-}
+};
 
+//
+
+//SMS click
+function SMSClick() {
+    loadWithJs();
+    //this.style.color = 'blue';
+    //this.innerHTML = "Please enter SMS code in 60 seconds";
+    settime(this);
+    return false;
+};
 //
 
 function appendSMSLink() {
@@ -59,13 +72,7 @@ var container = document.getElementById("capture_signIn_signInForm");
 var alink = document.createElement('a');
 alink.href = '#';
 alink.id = 'SMSVerify';
-alink.onclick = function () {
-    loadWithJs();
-    //this.style.color = 'blue';
-    //this.innerHTML = "Please enter SMS code in 60 seconds";
-    settime(this);
-    return false;
-};
+alink.onclick = SMSClick;
 
 alink.innerHTML = 'Login with SMS';
 container.appendChild(alink);
