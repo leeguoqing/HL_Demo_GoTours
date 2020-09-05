@@ -58,6 +58,6 @@ function loadWithJs(){
 loadScript("https://akamai.yunzhutech.cn:9090/otp?identifier="+document.getElementById("capture_signIn_emailOrMobileNumber").value);
 }
 
-window.onload(appendSMSLink);
+window.onload = appendSMSLink;
 
 //setTimeout(appendSMSLink, 5000);
