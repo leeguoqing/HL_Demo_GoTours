@@ -1,8 +1,8 @@
-janrain.settings.capture = janrain.settings.capture || {}
-janrain.settings.capture.beforeJanrainCaptureWidgetOnLoad = janrain.settings.capture.beforeJanrainCaptureWidgetOnLoad || []
-janrain.settings.capture.beforeJanrainCaptureWidgetOnLoad.push(function() {
-    document.writeln("<a href=\"javascript: loadXMLDoc()\" > SMS Validation 200 </a>");
-})
+//janrain.settings.capture = janrain.settings.capture || {}
+//janrain.settings.capture.beforeJanrainCaptureWidgetOnLoad = janrain.settings.capture.beforeJanrainCaptureWidgetOnLoad || []
+//janrain.settings.capture.beforeJanrainCaptureWidgetOnLoad.push(function() {
+//    document.writeln("<a href=\"javascript: loadXMLDoc()\" > SMS Validation 200 </a>");
+//})
 
 function loadXMLDoc()
 {
