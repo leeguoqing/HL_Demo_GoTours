@@ -32,16 +32,43 @@ xmlhttp.send();
 }
 
 
+//timer
+var countdown = 60; 
+function settime(val) { 
+if(countdown != 0){
+val.setAttribute("disabled", true); 
+val.value="Please enter the SMS code in (" + countdown + ") seconds."; 
+countdown--; 
+}else {
+ val.removeAttribute("disabled"); 
+ val.value="Login with SMS"; 
+ countdown = 60;
+ 
+return;//避免无限循环
+ } 
+setTimeout(function() {
+settime(val) 
+},1000) 
+}
+
+//
+
 function appendSMSLink() {
 var container = document.getElementById("capture_signIn_signInForm");
 var alink = document.createElement('a');
 alink.href = '#';
+alink.id = 'SMSVerify';
 alink.onclick = function () {
     loadWithJs();
-    this.style.color = 'blue';
-    this.innerHTML = "Please enter SMS code in 60 seconds";
+    //this.style.color = 'blue';
+    //this.innerHTML = "Please enter SMS code in 60 seconds";
+    settime(this);
     return false;
 };
+
+
+
+
 alink.innerHTML = 'SMS Validation';
 container.appendChild(alink);
 }
