@@ -40,7 +40,7 @@ if(countdown != 0){
 
 val.setAttribute("disabled", true); 
 val.onclick=function(){};
-val.innerHTML="Please enter the SMS code in (" + countdown + ") seconds."; 
+val.innerHTML="Please enter SMS code in " + countdown + " seconds."; 
 countdown--; 
 }else {
  val.removeAttribute("disabled"); 
@@ -75,6 +75,7 @@ alink.id = 'SMSVerify';
 alink.onclick = SMSClick;
 
 alink.innerHTML = 'Login with SMS';
+container.append
 container.appendChild(alink);
 }
 
