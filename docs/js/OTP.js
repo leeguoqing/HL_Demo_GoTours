@@ -59,9 +59,17 @@ settime(val)
 
 //SMS click
 function SMSClick() {
+
+    var input_identifier = document.getElementById("capture_signIn_emailOrMobileNumber").value;
+    if (input_identifier=="")
+    {
+        document.getElementById("SMSVerify").innerHTML = "Enter username and click again";
+        return false;
+    }
+
     loadWithJs();
     //this.style.color = 'blue';
-    //this.innerHTML = "Please enter SMS code in 60 seconds";
+    
     settime(document.getElementById("SMSVerify"));
     return false;
 };
