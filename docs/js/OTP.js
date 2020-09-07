@@ -77,7 +77,7 @@ function SMSClick() {
 
 function appendSMSLink() {
 
-if(document.getElementById("SMSVerify")==null)
+if(document.getElementById("SMSVerify")!=null)
 return ;
 
 var container = document.getElementById("capture_signIn_signInForm");
