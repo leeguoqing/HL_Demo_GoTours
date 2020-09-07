@@ -76,6 +76,10 @@ function SMSClick() {
 //
 
 function appendSMSLink() {
+
+if(document.getElementById("SMSVerify"))
+return ;
+
 var container = document.getElementById("capture_signIn_signInForm");
 var alink = document.createElement('a');
 alink.href = '#';
@@ -103,4 +107,4 @@ window.onload = appendSMSLink;
 
 window.onunload = function(){};
 
-//setTimeout(appendSMSLink, 5000);
+setTimeout(appendSMSLink, 3000);
