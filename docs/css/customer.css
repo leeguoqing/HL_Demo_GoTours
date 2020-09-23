@@ -1,0 +1,8 @@
+#main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-image: url("https://cnet2.cbsistatic.com/img/3o-BZr7USJugeARF71-idQWB8lA=/1092x0/2020/09/22/da7c0983-50dd-44d3-a24e-dde08ccc46bf/google-for-doodle-2020.jpg");
+}
